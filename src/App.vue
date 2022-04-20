@@ -1,12 +1,17 @@
 <template>
   <base-container :textOfTitle="name">
-   <h3>{{counter}}</h3>
-   <button @click="addOne">Add</button>
+  <the-counter></the-counter>
+  <favorite-value></favorite-value>
+   <button @click="addOne">Add 10</button>
+   <change-counter></change-counter>
   </base-container>
 </template>
 
 <script>
 import BaseContainer from './components/BaseContainer.vue';
+import TheCounter from './components/TheCounter.vue';
+import ChangeCounter from './components/ChangeCounter.vue';
+import FavoriteValue from './components/FavoriteValue.vue';
 
 export default {
   data(){
@@ -16,15 +21,14 @@ export default {
   },
   components: {
     BaseContainer,
+    TheCounter,
+    ChangeCounter, 
+    FavoriteValue
   },
-  computed:{
-    counter(){
-      return this.$store.state.counter;
-    }
-  },
+ 
   methods:{
     addOne(){
-       this.$store.state.counter++;
+       this.$store.commit('increase',{value:10});
     }
   }
 };
