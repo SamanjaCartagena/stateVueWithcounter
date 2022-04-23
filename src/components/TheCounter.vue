@@ -1,15 +1,19 @@
 <template>
+  <div>
     <h3>{{counter}}</h3>
+  </div>
 </template>
+
 <script>
-export default{
-    computed:{
-    counter(){
-      return this.$store.state.getters.finalCounter;
-    }
-  },
+export default {
+   computed:{
+       counter(){
+           return this.$store.state.counter;
+       }
+   }
 }
 </script>
-<style scoped>
+
+<style>
 
 </style>

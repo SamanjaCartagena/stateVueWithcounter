@@ -1,13 +1,15 @@
 <template>
   <section>
-    <h2>{{ textOfTitle }}</h2>
+    
     <slot></slot>
   </section>
 </template>
 
 <script>
 export default {
-  props: ['textOfTitle'],
+ components:{
+  
+ }
 };
 </script>
 
