@@ -1,13 +1,20 @@
 <template>
   <section>
-    
+    <h3>{{title}}</h3>
     <slot></slot>
   </section>
 </template>
 
 <script>
 export default {
+  props:['title'],
+  data(){
+    return{
+
+    }
+  },
  components:{
+   
   
  }
 };
